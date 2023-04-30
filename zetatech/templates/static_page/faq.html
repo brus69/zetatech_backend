@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Услуги парсинга и мониторинга цен! {% endblock %}
+{% block description %}  Короткое о {% endblock %}
+{% block content %} 
+
+<section>
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
+        <h1 class="display-4 fw-bold text-body-emphasis">Вопросы и ответы по парсингу</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">
+            Так как тема парсинга часто привлекает внимание и вызывает эмоции (в массе негативные), 
+            мы подготовили этот раздел, где ответили на основные вопросы с которыми сталкивались в процессе работы и, 
+            надеемся, развеем некоторые мифы.</p>
+        </div>
+        <div class="overflow-hidden" style="max-height: 30vh;">
+          <div class="container px-5">
+            <img src="{% static '/img/bootstrap-docs.png' %}" class="img-fluid border rounded-3 shadow-lg mb-4" 
+            alt="Example image" width="700" height="500" loading="lazy">
+          </div>
+        </div>
+      </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                      <!---->
+                      {% for i in page %}
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-heading-{{ i.id }}">
+                          <button class="accordion-button collapsed" type="button" 
+                          data-bs-toggle="collapse" 
+                          data-bs-target="#flush-collapse-{{ i.id }}" 
+                          aria-expanded="false" aria-controls="flush-collapse-{{ i.id }}">
+                              {{ i.title }}
+                          </button>
+                        </h2>
+                        <div id="flush-collapse-{{ i.id }}" class="accordion-collapse collapse" 
+                        aria-labelledby="flush-heading-{{ i.id }}" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">
+                                {{ i.content }}
+                            </div>
+                        </div>
+                      </div>
+                      {% endfor %}
+                      <!---->
+
+                  </div>                        
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock%}

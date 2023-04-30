@@ -1,0 +1,53 @@
+ /* Телефон в header */
+.phone-margin {
+    margin: 18px 10px 0 0;
+}
+
+ /* Изменение отступов у изображения под header */
+ .header-img-margin {
+    padding: 18px 10px 0 18px;
+}
+
+ /* Отступ для section универсальный */
+.section-margint-top {
+    margin-top: 100px;
+    padding: 100px;
+}
+
+ /* Отступ для section универсальный минимальный */
+ .section-margint-top-min {
+    margin-top: 50px;
+    padding: 50px;
+}
+
+ /* Отступ для section от header */
+ .section-margint-top-min {
+    margin-top: 25px;
+}
+
+ /* Отступ для описания фото */
+ .min-img-description {
+    margin-top: 5px;
+    color: #bbbbbb;
+ }
+
+
+ /* Стили для footer */
+ footer {
+    padding-top:30px;
+ }
+
+ .bg-soft-warning {
+    background-color: rgba(241,185,128,.1)!important;
+}
+
+/* форма поиска */
+.castum-botoom-search {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Отступ с лева и права в шаблоне doc */
+.left-right-content-padding {
+    padding: 0 150px;
+}

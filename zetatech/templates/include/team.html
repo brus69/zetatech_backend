@@ -1,0 +1,34 @@
+
+
+<section class="section-margint-top-min">
+    <div class="container">
+        
+      <div class="row py-lg-5 text-center">
+            <div class="col-lg-6 col-md-8 mx-auto">
+              <h2 class="fw-light">Наша команда</h2>
+              <div class="lead text-body-secondary">
+                  Мы - профессиональная команда, занимающаяся парсингом сайтов, которые способны решить любую задачу.
+              </div>
+            </div>
+          </div>
+
+        <div class="row py-lg-5">
+          
+           {% for img in team %}
+          <div class="col-md-3">
+                <div class="card card-hover border-0 bg-transparent">
+                  <div class="position-relative">
+                    <img src="{{ img.img }}" class="rounded-3 shadow" width="100%" alt="Ralph Edwards">
+                  </div>
+                  <div class="card-body text-center p-3">
+                    <h3 class="fs-lg fw-semibold pt-1 mb-2">{{ img.name }}</h3>
+                    <p class="fs-sm mb-0">{{ img.position }}</p>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+
+
+        </div>
+    </div>
+  </section>

@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Услуги парсинга и мониторинга цен! {% endblock %}
+{% block description %}  Короткое о {% endblock %}
+
+
+
+{% block content %}
+<section>
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="{% static '/img/bootstrap-themes.png' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+            {% block h1%}{% endblock %}
+          </h1>
+          <p class="lead">
+            {% block min_content%}{% endblock %}
+          </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="button" class="btn btn-warning btn-lg px-4 shadow me-md-2">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-margint-top-min">
+      <div class="container">
+          <div class="row mb-3">
+              <div class="col-12 col-md-4">
+                  <div class="card shadow-sm">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="{% static '/img/top-venok.png' %}" width="100%" class="header-img-margin">
+                      </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">{% block pup_con1_h3 %}{% endblock %}</h5>
+                            <p class="card-text">
+                              {% block pup_con1 %}{% endblock %}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                  <div class="card shadow-sm">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="{% static '/img/top-venok.png' %}" width="100%" class="header-img-margin">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">{% block pup_con2_h3 %}{% endblock %}</h5>
+                            <p class="card-text">
+                              {% block pup_con2 %}{% endblock %}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                  <div class="card shadow-sm">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="{% static '/img/top-venok.png' %}" width="100%" class="header-img-margin">
+                      </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">{% block pup_con3_h3 %}{% endblock %}</h5>
+                            <p class="card-text">
+                              {% block pup_con3 %}{% endblock %}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+            </div>
+      </div>
+  </section>
+
+  <section class="section-margint-top bg-dark shadow-lg">
+      <div class="container marketing">
+          <div class="row featurette">
+              <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading text-white">
+                {% block scraping_content_h3 %}{% endblock %}
+              </h2>
+              <div class="lead text-white"><em>
+                {% block scraping_content_author %}
+                {% endblock %}
+                  </em>
+                      <h2 class="text-white fw-normal">Интересные ссылки:</h2>
+      
+      <ul class="list-unstyled ps-0">
+        <li>
+          <a class="icon-link mb-1" href="https://github.com/twbs/examples/tree/main/icons-font" rel="noopener" target="_blank">
+            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+            Bootstrap npm starter
+          </a>
+        </li>
+        <li>
+          <a class="icon-link mb-1" href="https://github.com/twbs/examples/tree/main/parcel" rel="noopener" target="_blank">
+            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+            Bootstrap Parcel starter
+          </a>
+        </li>
+        <li>
+          <a class="icon-link mb-1" href="https://github.com/twbs/examples/tree/main/vite" rel="noopener" target="_blank">
+            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+            Bootstrap Vite starter
+          </a>
+        </li>
+        <li>
+          <a class="icon-link mb-1" href="https://github.com/twbs/examples/tree/main/webpack" rel="noopener" target="_blank">
+            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+            Bootstrap Webpack starter
+          </a>
+        </li>
+      </ul>
+                  </div>
+              </div>
+              <div class="col-md-5 order-md-1">
+                  <figure class="figure">
+                  <img src="{% static '/img/mean-director.png' %}" class="rounded-3" width="100%"/>
+                  <figcaption class="figure-caption min-img-description">Руководитель ZETATECH Андрей Александрович.</figcaption>
+              </figure>
+              </div>
+          </div>
+        </div>
+  </section>
+
+{% include "include/team.html" %}
+
+{% include "include/example_bd.html" %}
+
+{% include "include/contact_form.html" %}
+
+{% endblock %}

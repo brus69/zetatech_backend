@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Контакты {% endblock %}
+{% block description %} Описание о контактов {% endblock %}
+{% block content %} 
+<section>
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+          <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Контактная информация</h1>
+            <p class="col-lg-10 fs-4">
+                <p> Наш офис и все разработчики находятся в Санкт-Петербурге. 
+                    Сейчас в нашей команде порядка 20 человек, 
+                    которые занимаются вопросами парсинга и разработки.</p>
+                <ul>
+                    <li>Телефон: 8 800-435-65-43</li>
+                    <li>EMAIL: info@zenotest.ru</li>
+                    <li>Адрес: Санкт-Петербург, г. Кудрово, Пражская 4 </li>
+                    <li>Социальные сети: Youtube, VK, Telegramm</li>
+                </ul>
+                <ul>
+                <li>Время работы:</li>
+                <li>ПН-ПТ с 9.00 до 18.00 по МСК,</li>
+                <li>СБ, ВС - выходной.</li>
+                </ul>  
+            </p>
+          </div>
+          <div class="col-md-10 mx-auto col-lg-5">
+            <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+                <h3>Форма обратной связи</h3>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+              </div>
+              <div class="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="remember-me"> Remember me
+                </label>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+              <hr class="my-4">
+              <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+            </form>
+          </div>
+        </div>
+      </div>
+</section>
+
+<section>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A172a0fadc3037dab46330af1d8aac2e5589e2eac4babb777d97ec58efb39e7d7&amp;width=100%25&amp;height=632&amp;lang=ru_RU&amp;scroll=true"></script>
+</section>
+
+{% endblock%}
