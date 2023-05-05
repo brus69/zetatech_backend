@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Бесплатные базы компаний {% endblock %}
+{% block description %} Описание бесплатные базы компаний {% endblock %}
+{% block content %} 
+{% include 'include/search.html' %}
+{% include 'include/breadcrumb.html' %}
+<section>
+    <div class="container">
+        <div class="row">
+<!-- tovar -->
+<div class="col-md-9">
+<div class="container">
+    <div class="row g-4">
+
+        <div class="col-md-6">
+            <img src="{% static '/img/auto_bd_icon.png' %}"  width="100%"/>
+        </div>
+        <div class="col-md-6 border-end">
+            <h1 class="fs-2">{{ tovar.h1 }}</h1>
+
+            <p>Цена: {{ tovar.price }} <strike>P</strike></p>
+            <p>
+            {{ tovar.mini_content }}
+          </p>
+          
+            <a href="{{ tovar.upload.url }}" class="btn btn-primary">
+              Скачать
+            </a>
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <th scope="row">Дата обновления базы:</th>
+                  <td>{{ tovar.pup_date }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Категория:</th>
+                  <td>{{ tovar.catalog }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Метка:</th>
+                  <td>{{ tovar.tag }}</td>
+                </tr>
+              </tbody>
+            </table>
+            
+        </div>
+
+    </div>
+    <!---->
+<!-- content -->
+<div class="bd-example">
+<nav>
+  <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+<button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Описание</button>
+<button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false" tabindex="-1">Правовая информация</button>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <p>
+       <h2>{{ tovar.h2 }}</h2>
+       {{ tovar.content }}
+    </p>
+  </div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <p>
+        <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" style="max-width:550px;">
+            <div class="form-floating mb-3">
+                <h3 class="h3">Форма обратной связи</h3>
+              </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+              <label for="floatingPassword">Password</label>
+            </div>
+            <div class="form-floating mb-3">
+                
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Текст обращения" rows="3"></textarea>
+                <label for="exampleFormControlTextarea1">Текст обращения</label>
+              </div>
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me"> Remember me
+              </label>
+            </div>
+            
+
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Отправить</button>
+            <hr class="my-4">
+            <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+          </form>
+    </p>
+  </div>
+
+</div>
+</div>
+<!-- end content -->
+    <!---->
+</div>
+</div>
+<!-- end tovar -->
+            <!-- sidebar -->
+            <div class="col-md-3">
+                {% include 'include/sidebar.html'%}
+            </div>
+            <!-- end sidebar -->
+
+        </div>
+    </div>        
+  </section>
+{% endblock %}

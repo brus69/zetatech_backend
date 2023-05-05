@@ -2,18 +2,18 @@
 <header class="p-3 text-bg-dark shadow-lg">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <a href="{% url 'index' %}" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
           <span class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
             <img src="{% static '/img/logo_zetatech.png' %}" />
           </span>
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 text-secondary">Главная</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Бесплатные базы</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Расчитать цену</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">О нас</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Контакты</a></li>
+          <li><a href="{% url 'index' %}" class="nav-link px-2 text-white">Главная</a></li>
+          <li><a href="{% url 'catalog' %}" class="nav-link px-2 text-white">Бесплатные базы</a></li>
+          <li><a href="{% url 'offer' %}" class="nav-link px-2 text-white">Оферта</a></li>
+          <li><a href="{% url 'faq' %}" class="nav-link px-2 text-white">Вопросы и ответы</a></li>
+          <li><a href="{% url 'contact' %}" class="nav-link px-2 text-white">Контакты</a></li>
         </ul>
 
         <div class="text-end">

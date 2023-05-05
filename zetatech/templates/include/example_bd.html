@@ -29,98 +29,19 @@
         <h2 class="fw-light text-center">Скачать примеры</h2>
         <div class="container">
             <div class="row g-3">
-                <div class="col-md-3">
+               {% for product in exemple %} 
+              <div class="col-md-3">
                     <div class="card bg-secondary bg-gradient">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                        <img class="bd-placeholder-img card-img-top" src="{{ product.catalog.icon }}" width="100%" height="180" />
                         <div class="card-body">
-                          <h5 class="card-title text-white">Рестораны</h5>
-                          
-                          <a href="#" class="btn btn-warning shadow">Скачать бесплатно</a>
+                          <h5 class="card-title text-white">{{ product.h1 }}</h5>
+                          <a href="{{ product.upload }}" class="btn btn-warning shadow">Скачать бесплатно</a>
                         </div>
                       </div>
                 </div>
-
-                <div class="col-md-3">
-                    <div class="card bg-secondary bg-gradient">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-                        <div class="card-body">
-                          <h5 class="card-title text-white">Интернет магазины</h5>
-                          
-                          <a href="#" class="btn btn-warning shadow">Скачать бнсплатно</a>
-                        </div>
-                      </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card bg-secondary bg-gradient">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-                        <div class="card-body">
-                          <h5 class="card-title text-white">Аптеки</h5>
-                          
-                          <a href="#" class="btn btn-warning shadow">Скачать бесплатно</a>
-                        </div>
-                      </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card bg-secondary bg-gradient">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-                        <div class="card-body">
-                          <h5 class="card-title text-white">Туризм</h5>
-                          
-                          <a href="#" class="btn btn-warning shadow">Скачать бесплатно</a>
+                {% endfor %}
                 
-                        </div>
-                      </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card bg-secondary bg-gradient">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-                        <div class="card-body">
-                          <h5 class="card-title text-white">Туризм</h5>
-                          
-                          <a href="#" class="btn btn-warning shadow">Скачать бесплатно</a>
-                
-                        </div>
-                      </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card bg-secondary bg-gradient">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-                        <div class="card-body">
-                          <h5 class="card-title text-white">Туризм</h5>
-                          
-                          <a href="#" class="btn btn-warning shadow">Скачать бесплатно</a>
-                
-                        </div>
-                      </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card bg-secondary bg-gradient">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-                        <div class="card-body">
-                          <h5 class="card-title text-white">Туризм</h5>
-                          
-                          <a href="#" class="btn btn-warning shadow">Скачать бесплатно</a>
-                
-                        </div>
-                      </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card bg-secondary bg-gradient">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-                        <div class="card-body">
-                          <h5 class="card-title text-white">Туризм</h5>
-                          
-                          <a href="#" class="btn btn-warning shadow">Скачать бесплатно</a>
-                
-                        </div>
-                      </div>
-                </div>
+           
 
             </div>
         </div>

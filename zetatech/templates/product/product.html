@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Контакты {% endblock %}
-{% block description %} Описание о контактов {% endblock %}
+{% block title %} Бесплатные базы компаний {% endblock %}
+{% block description %} Описание бесплатные базы компаний {% endblock %}
 {% block content %} 
 <section>
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
@@ -15,4 +15,45 @@
       </div>
   </section>
 {% include 'include/breadcrumb.html' %}
+
+<section>
+  <div class="container">
+      <div class="row">
+          <!-- sidebar -->
+          <div class="col-md-3">
+              {% include 'include/sidebar.html' %}
+          </div>
+          <!-- end sidebar -->
+
+          <!-- catalog -->
+          <div class="col-md-9">
+          <div class="container">
+              <div class="row">
+{% for product in tovar %}
+<!-- item -->
+<div class="col-md-3">
+<div class="card border-0 shadow-sm lh-1 mb-3" style="max-width: 15rem;">
+  <div class="card-header">
+      <img src="{% static '/img/auto_bd_icon.png' %}" width="100%" class="rounded-3"/>
+    </div>
+  <div class="card-body">
+      <p><small>{{ product.catalog }}</small></p>
+    <h5 class="card-title h6">{{ product.h1 }}</h5>
+    <p><small>{{ product.price }} <strike>P</strike></small></p>
+    <a href="{% url 'product_detail' product.slug %}" class="btn btn-warning btn-sm">Подробнее</a>
+  </div>
+</div>
+</div>
+<!-- end item -->
+{% endfor %}
+              </div>
+          </div>
+          {% include 'include/paginator.html' %}
+          </div>
+          <!-- end catalog -->
+
+      </div>
+  </div>        
+</section>
+
 {% endblock %}
