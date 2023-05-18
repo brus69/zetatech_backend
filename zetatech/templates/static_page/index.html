@@ -14,10 +14,20 @@
         </div>
         <div class="col-lg-6">
           <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
-            {% block h1%}{% endblock %}
+            {% block h1%}Парсинг сайтов и мониторинг цен конкурентов!{% endblock %}
           </h1>
           <p class="lead">
-            {% block min_content%}{% endblock %}
+            {% block min_content%}
+            Для кого может полезна быть услуга:
+            <ul>
+              <li><b>Маркетологи и аналитики:</b> Парсинг сайтов может помочь маркетологам получить данные о конкурентах, анализировать рынок, отслеживать цены и товары, 
+                а также собирать информацию о потенциальных клиентах.</li>
+              <li><b>Бизнес-владельцы и предприниматели:</b> Парсинг сайтов может предоставить ценные сведения о товарах, ценах, конкуренции и других аспектах бизнеса, 
+                что поможет принимать более осознанные решения.</li>
+              <li><b>E-commerce компании:</b> Интернет-магазины могут использовать парсинг сайтов для мониторинга цен конкурентов, отслеживания наличия товаров, сбора отзывов клиентов и других данных, что поможет им оптимизировать свои стратегии продаж.</li>
+              <li><b>Колл-центры и отделы продаж:</b> Сбор контактных данных других компаний для обзвона </li>
+            </ul>
+            {% endblock %}
           </p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start">
             <button type="button" class="btn btn-warning btn-lg px-4 shadow me-md-2">Заказать</button>
@@ -38,9 +48,13 @@
                       </div>
                         <div class="col-md-8">
                           <div class="card-body">
-                            <h5 class="card-title">{% block pup_con1_h3 %}{% endblock %}</h5>
+                            <h5 class="card-title">{% block pup_con1_h3 %}
+                              Экспертиза и опыт:
+                              {% endblock %}</h5>
                             <p class="card-text">
-                              {% block pup_con1 %}{% endblock %}
+                              {% block pup_con1 %}
+                              Наша команда проходила в обучение в Яндексе (есть диплом)
+                              {% endblock %}
                             </p>
                           </div>
                         </div>
@@ -56,9 +70,13 @@
                         </div>
                         <div class="col-md-8">
                           <div class="card-body">
-                            <h5 class="card-title">{% block pup_con2_h3 %}{% endblock %}</h5>
+                            <h5 class="card-title">{% block pup_con2_h3 %}
+                              Мониторинг и обновление:
+                              {% endblock %}</h5>
                             <p class="card-text">
-                              {% block pup_con2 %}{% endblock %}
+                              {% block pup_con2 %}
+                              Обновляем данные которые парсим раз в сутки
+                              {% endblock %}
                             </p>
                           </div>
                         </div>
@@ -74,9 +92,13 @@
                       </div>
                         <div class="col-md-8">
                           <div class="card-body">
-                            <h5 class="card-title">{% block pup_con3_h3 %}{% endblock %}</h5>
+                            <h5 class="card-title">{% block pup_con3_h3 %}
+                              Доверие:
+                              {% endblock %}</h5>
                             <p class="card-text">
-                              {% block pup_con3 %}{% endblock %}
+                              {% block pup_con3 %}
+                              Нам важна наша репутация и мы открытая компания, у нас есть youtub канал где мы показываем как парсим сайты.
+                              {% endblock %}
                             </p>
                           </div>
                         </div>
@@ -92,40 +114,36 @@
           <div class="row featurette">
               <div class="col-md-7 order-md-2">
               <h2 class="featurette-heading text-white">
-                {% block scraping_content_h3 %}{% endblock %}
+                {% block scraping_content_h3 %}
+                Что можно парсить
+                {% endblock %}
               </h2>
-              <div class="lead text-white"><em>
+              <div class="lead text-white">
+                <em>
                 {% block scraping_content_author %}
+                Парсинг можно применять для сбора и анализа различных типов данных и это законно если не собирать персональные данные физических лиц:
+<p>
+1) Текстовую информацию: Вы можете собирать текстовую информацию с веб-страниц, 
+такую как новости, статьи, блоги, отзывы и другие текстовые данные.
+</p>
+<p>
+2) Структурированную информацию: Можно парсить структурированные данные, такие как таблицы, графики, расписания, 
+контактные данные и другую информацию, представленную в упорядоченном формате.
+</p>
+<p>
+3) Изображения и медиа-файлы: Парсинг позволяет извлекать изображения, видео, аудиофайлы и другие медиа-ресурсы, 
+которые могут быть полезными для анализа или использования в других приложениях.
+</p>
+<p>
+4) Цены и товары: Парсинг может быть использован для сбора информации о ценах, 
+характеристиках товаров, наличии и других данных, связанных с электронной коммерцией.
+</p>
+В целом, практически любые данные, представленные на веб-страницах, могут быть собраны и обработаны с помощью парсинга, 
+что позволяет получать ценную информацию для различных целей и задач.
                 {% endblock %}
                   </em>
-                      <h2 class="text-white fw-normal">Интересные ссылки:</h2>
       
-      <ul class="list-unstyled ps-0">
-        <li>
-          <a class="icon-link mb-1" href="https://github.com/twbs/examples/tree/main/icons-font" rel="noopener" target="_blank">
-            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-            Bootstrap npm starter
-          </a>
-        </li>
-        <li>
-          <a class="icon-link mb-1" href="https://github.com/twbs/examples/tree/main/parcel" rel="noopener" target="_blank">
-            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-            Bootstrap Parcel starter
-          </a>
-        </li>
-        <li>
-          <a class="icon-link mb-1" href="https://github.com/twbs/examples/tree/main/vite" rel="noopener" target="_blank">
-            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-            Bootstrap Vite starter
-          </a>
-        </li>
-        <li>
-          <a class="icon-link mb-1" href="https://github.com/twbs/examples/tree/main/webpack" rel="noopener" target="_blank">
-            <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-            Bootstrap Webpack starter
-          </a>
-        </li>
-      </ul>
+      
                   </div>
               </div>
               <div class="col-md-5 order-md-1">
