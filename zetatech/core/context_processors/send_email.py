@@ -1,8 +1,7 @@
-# удалить потом после тестов
 from django.shortcuts import render, redirect
 from django.core.mail import BadHeaderError, send_mail
 from django.http import HttpResponse, HttpResponseRedirect
-from .form import FeedbackForm
+from core.form import FeedbackForm
 # Create your views here.
 
 def send_email(request):
@@ -15,8 +14,7 @@ def send_email(request):
                 consent = form.cleaned_data['consent']
                 # Дополнительная логика
                 # ...
-                return render(request, 'include/modal_form.html')  # Замените 'success.html' на ваш шаблон успеха
+                return   # Замените 'success.html' на ваш шаблон успеха
     else:
         form = FeedbackForm()
-    return render(request, 'include/modal_form.html', {'form': form})
-
+    return  {'form': form}

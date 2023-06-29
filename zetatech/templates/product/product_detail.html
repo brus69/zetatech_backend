@@ -23,10 +23,16 @@
             <p>
             {{ tovar.mini_content }}
           </p>
-          
+          {% if tovar.upload  %}
             <a href="{{ tovar.upload.url }}" class="btn btn-primary">
               Скачать
             </a>
+            {% else %}
+            <p class="text-danger">
+              База временно не доступна для скачивания!
+            </p>
+            {% endif %}
+
             <table class="table table-striped">
               <tbody>
                 <tr>
@@ -48,6 +54,7 @@
 
     </div>
     <!---->
+{% include 'include/lid_tel_form.html'%}
 <!-- content -->
 <div class="bd-example">
 <nav>
