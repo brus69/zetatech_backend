@@ -13,14 +13,11 @@
           </div>
           <div class="col-md-10 mx-auto col-lg-5">
             <form class="shadow p-4 p-md-5 border rounded-3 bg-body-tertiary">
+              {% csrf_token %}
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Ваше имя</label>
+                {{ form_contact_feedback.as_p }}
               </div>
-              <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Ваш телефон</label>
-              </div>
+              
               <div class="checkbox mb-3">
                 <label>
                   <input type="checkbox" value="remember-me"> Согласие на обработку данных

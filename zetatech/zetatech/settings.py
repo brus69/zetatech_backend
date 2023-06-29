@@ -73,6 +73,8 @@ TEMPLATES = [
                 # Добавлен контекст-процессор
                 'core.context_processors.year.year',
                 'core.context_processors.send_email.send_email',
+                'core.context_processors.lid_tel_form.lid_tel_form',
+                'core.context_processors.form_contact_feedback.form_contact_feedback',
             ],
         },
     },
