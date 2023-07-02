@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Неудачная отправка формы!{% endblock %}
+{% block description %}Неудачная отправка формы! {% endblock %}
+{% block content %}
+<section>
+    <div class="error">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-7 text-center">
+              <img src="{% static '/img/form_error.png' %}" alt="image form ok" style="height:400px;">
+              <h2><b>Отправка формы не удалась!</b></h2>
+              <p>Ошибка отправки формы обратной связи!</p>
+              <p>посетите главную страницу <br> возможно вы найдёте её</p>
+              <a href="/" class="btn btn-warning">На главную</a>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+{% endblock %}

@@ -30,3 +30,4 @@ def offer(request):
 def page_not_found(request, exception):
     return render(request, 'static_page/404.html', {'path': request.path}, status=404)
 
+

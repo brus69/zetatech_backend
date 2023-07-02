@@ -7,10 +7,10 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
         </div>
         <div class="modal-body">
-          <form action="{% url 'feedback' %}" method="POST" class="p-4 p-md-5 rounded-3 bg-body-tertiary">
+          <form method="POST" action="{% url 'modal_form' %}" class="p-4 p-md-5 rounded-3 bg-body-tertiary">
             {% csrf_token %}
             <div class="form-floating mb-3">
-            {{ form.as_p }}
+            {{ modal_form.as_p }}
             </div>
             <button class="w-100 btn btn-lg btn-warning shadow" type="submit">Отправить заявку</button>
             <hr class="my-4">

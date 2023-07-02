@@ -12,17 +12,13 @@
         </span>
           </div>
           <div class="col-md-10 mx-auto col-lg-5">
-            <form class="shadow p-4 p-md-5 border rounded-3 bg-body-tertiary">
+            <form method = 'POST' action ="{% url 'form_contact' %}" class="shadow p-4 p-md-5 border rounded-3 bg-body-tertiary">
               {% csrf_token %}
               <div class="form-floating mb-3">
                 {{ form_contact_feedback.as_p }}
               </div>
-              
-              <div class="checkbox mb-3">
-                <label>
-                  <input type="checkbox" value="remember-me"> Согласие на обработку данных
-                </label>
-              </div>
+    
+        
               <button class="w-100 btn btn-lg btn-warning shadow" type="submit">Отправить заявку</button>
               <hr class="my-4">
               <small class="text-body-secondary">Нажав кнопку "Отправить заявку", вы соглашаетесь с условиями использования.</small>

@@ -63,3 +63,6 @@ class Form_Contact_Feedback(forms.Form):
                                'class': 'form-control',
                                'style': 'height:100px;',
                            }))
+    check_box_form = forms.BooleanField(label='', 
+                                        help_text='Согласие на обработку данных'
+                                        )

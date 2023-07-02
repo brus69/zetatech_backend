@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv 
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -72,7 +75,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 # Добавлен контекст-процессор
                 'core.context_processors.year.year',
-                'core.context_processors.send_email.send_email',
+                'core.context_processors.modal_form.modal_form',
                 'core.context_processors.lid_tel_form.lid_tel_form',
                 'core.context_processors.form_contact_feedback.form_contact_feedback',
             ],
@@ -137,15 +140,21 @@ MEDIA_ROOT = ''
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#  подключаем движок filebased.EmailBackend
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-# указываем директорию, в которую будут складываться файлы писем
-EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
+# # конфигурации для реального ящика
+# # Укажите вашу почту в качестве отправителя
+DEFAULT_FROM_EMAIL = 'brusilov739@yandex.ru'
 
-# конфигурации для реального ящика
-# EMAIL_HOST = ''
-# EMAIL_USE_TLS = True
-# EMAIL_USE_SSL = False
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = ''
-# EMAIL_HOST_PASSWORD = ''
+# # Укажите почту, на которую должны приходить уведомления
+NOTIFY_EMAIL = 'brus739@gmail.com'
+
+# Добавьте настройки для отправки email через SMTP (если необходимо)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.yandex.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'brusilov739@yandex.ru'
+EMAIL_HOST_PASSWORD = os.getenv('PASSWORD_EMAIL')
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+
+

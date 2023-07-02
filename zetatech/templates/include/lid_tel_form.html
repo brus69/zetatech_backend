@@ -8,7 +8,7 @@
         <div class="col-md-7">
           <div class="card-body">
             <p>
-              <form class="p-4 p-md-12">
+              <form  method="POST" action="{% url 'callback' %}" class="p-4 p-md-12">
                 {% csrf_token %}
                 <div class="form-floating mb-3">
                 <h5 class="card-title">Введите телефон, и мы перезвоним прямо сейчас!</h5>
