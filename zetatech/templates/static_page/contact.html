@@ -28,7 +28,7 @@
           <div class="col-md-10 mx-auto col-lg-5">
             <form method="POST" action="{% url 'form_contact' %}" class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
                 <h3>Форма обратной связи</h3>
-              
+                {% csrf_token %}
               <div class="form-floating mb-3">
                 {{ form_contact_feedback.as_p }}
               </div>
