@@ -27,9 +27,9 @@ class Product(models.Model):
     h2 = models.CharField(max_length=100, blank=True)
     content = models.TextField(blank=True)
     catalog = models.ForeignKey(CategoryProduct, on_delete=models.CASCADE, 
-                                related_name='products')
-    tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
-    upload = models.FileField(upload_to='uploads/%Y/%m/%d/', blank=True)
+                                related_name='products', null=True)
+    tag = models.ForeignKey(Tag, on_delete=models.CASCADE, null=True)
+    upload = models.FileField(upload_to='uploads/%Y/%m/%d/', null=True, blank=True)
 
     def save(self, *args, **kwargs):
         if self.price is None:
