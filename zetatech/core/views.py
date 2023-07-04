@@ -1,7 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.core.mail import BadHeaderError, send_mail
 from .form import FeedbackForm, Lid_Tel_Form, Form_Contact_Feedback
+from django.db.models import Q
 from zetatech.settings import *
+from catalog.models import Product
 
 # Create your views here.
 
@@ -55,3 +57,18 @@ def form_contact(request):
 
 def form_error(request):
      return render(request, "static_page/form_error.html")
+
+def search(request):
+     query = request.GET.get('q')
+     results = []
+     if query:
+          results = Product.objects.filter(
+               Q(title__icontains=query) | 
+               Q(h1__icontains=query) | 
+               Q(mini_content__icontains=query) | 
+               Q(h2__icontains=query) | 
+               Q(content__icontains=query)
+          )
+     return render(request, 
+                   'static_page/result_search.html', 
+                   {'results_search': results})

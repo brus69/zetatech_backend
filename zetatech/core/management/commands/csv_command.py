@@ -1,6 +1,7 @@
 from django.core.management.base import BaseCommand
 from django.core.management import CommandError
 import csv
+from datetime import datetime
 from catalog.models import Product
 
 class Command(BaseCommand):
@@ -27,7 +28,7 @@ class Command(BaseCommand):
                     'h1': row.get('h1'),
                     'mini_content': row.get('mini_content'),
                     'price': row.get('price'),
-                    'pup_date': row.get('pup_date'),
+                    'pup_date': datetime.now().strftime('%Y-%m-%d'),
                     'h2': row.get('h2'),
                     'content': row.get('content'),
                     'catalog': None,
@@ -40,6 +41,7 @@ class Command(BaseCommand):
                
                 data = Product(**context)
                 data.save()
+        self.stdout.write('Успешное завершение добавление в БД')
 
         
 
